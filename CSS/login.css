@@ -261,6 +261,15 @@ body {
         transition: 0.8s;
         border-radius: 12px;
     }
+    
+    .bottom>div input {
+        width: 167px;
+        height: 21px;
+        padding: 0 8px;
+        background-color: rgb(31, 32, 41);
+        background-color: #f8f8f8;
+        color: #000;
+    }
 }
 
 @media only screen and (max-width:639px) {
@@ -301,5 +310,14 @@ body {
         position: relative;
         transition: 0.8s;
         border-radius: 12px;
+    }
+    
+    .bottom>div input {
+        width: 150px;
+        height: 19px;
+        padding: 0 8px;
+        background-color: rgb(31, 32, 41);
+        background-color: #f8f8f8;
+        color: #000;
     }
 }
