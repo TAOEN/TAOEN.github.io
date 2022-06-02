@@ -1,0 +1,305 @@
+* {
+    margin: 0;
+    padding: 0;
+    outline: none;
+    border: none;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f8f8f8;
+}
+
+.container {
+    width: 300px;
+    height: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    /* perspective 指定了观察对象与z=0平面的距离，使具有三维位置变换的元素产生透视效果 */
+    perspective: 1000px;
+    /* 给最外层加上一个透视，否则接下去的翻转会没有3D效果 */
+}
+
+.top {
+    width: 300px;
+    display: flex;
+    cursor: pointer;
+    /* justify-content 属性定义了浏览器之间，如何分配顺着弹性容器主轴（或者网格行轴）的元素之间及其周围的空间 */
+    /* space-evenly 是均匀排列每个元素，每个元素之间的间隔相等 */
+    justify-content: space-evenly;
+}
+
+.off,
+.on {
+    color: #000;
+    transition: 0.5s;
+    font-weight: 300;
+    font-size: 25px;
+    font: large;
+}
+
+.on {
+    /* 设置一个元素的不透明度, 区间为[0,1] */
+    opacity: 0.8;
+}
+
+.button {
+    width: 60px;
+    height: 25px;
+    background-color: #ffeba7;
+    border-radius: 20px;
+    position: relative;
+}
+
+.ball {
+    position: absolute;
+    /* 高度与宽度不能大于 .button 的 height 否则滚珠会超过整个圆角矩形的范围 */
+    width: 25px;
+    height: 25px;
+    background-color: rgb(115, 113, 139);
+    border-radius: 50%;
+    transition: 0.5s;
+    /* x偏移量 | y偏移量 | 阴影模糊半径 | 阴影颜色 */
+    box-shadow: 0 0 10px rgb(115, 113, 139);
+    left: 0;
+    transform: translate(-1px);
+}
+
+.bottom {
+    width: 300px;
+    height: 250px;
+    background-color: #9CC5B7;
+    /* 使元素的子元素应位于3D空间中 */
+    transform-style: preserve-3d;
+    position: relative;
+    transition: 0.8s;
+    border-radius: 15px;
+}
+
+.bottom>div {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    /* Specifies that internal elements are arranged in columns in the Flex container */
+    flex-direction: column;
+    /* 把元素放在中间 */
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.bottom>div h2 {
+    color: #fff;
+    transform: scale(0.8);
+}
+
+.bottom>div input {
+    width: 200px;
+    height: 25px;
+    padding: 0 10px;
+    background-color: rgb(31, 32, 41);
+    background-color: #f8f8f8;
+    /* 使输入框中的输入文本为黑色 */
+    color: #000;
+}
+
+/* Enter 按钮 */
+.bottom>div button {
+    width: 80px;
+    height: 25px;
+    color: #333;
+    background-color: #ffeba7;
+    border-radius: 15px;
+    transition: 0.3s;
+    /* margin-bottom: 10px; */
+    cursor: pointer;
+}
+
+.bottom>div button:hover {
+    box-shadow: 0 0 10px rgb(255, 235, 167);
+}
+
+.signin {
+    transform: translateZ(50px);
+}
+
+.signup {
+    /* 使元素沿Y轴翻转180度，避免在转换Sign in和Sign up的时候，文字会反着显示 */
+    position: absolute;
+    top: 0;
+    transform: translateZ(-50px) rotateY(180deg);
+}
+
+
+/* ------------------------------------ Responsive ------------------------------------ */
+
+
+/* 不同的 breakpoint 将设备划分为4种情况，分别是extra large device, large device, medium device, small device*/
+
+@media screen and (min-width:1280px) {
+    .off,
+    .on {
+    color: #000;
+    transition: 0.5s;
+    font-weight: 300;
+    font-size: 25px;
+    font: large;
+    }
+
+    .button {
+        width: 60px;
+        height: 25px;
+        background-color: #ffeba7;
+        border-radius: 20px;
+        position: relative;
+    }
+
+    .ball {
+        position: absolute;
+        width: 25px;
+        height: 25px;
+        background-color: rgb(115, 113, 139);
+        border-radius: 50%;
+        transition: 0.5s;
+        box-shadow: 0 0 10px rgb(115, 113, 139);
+        left: 0;
+        transform: translate(-1px);
+    }
+    
+    .bottom {
+        width: 300px;
+        height: 250px;
+        background-color: #9CC5B7;
+        transform-style: preserve-3d;
+        position: relative;
+        transition: 0.8s;
+        border-radius: 15px;
+    }  
+}
+
+@media screen and (max-width:1279px) and (min-width:960px) {
+    .off,
+    .on {
+    color: #000;
+    transition: 0.5s;
+    font-weight: 300;
+    font-size: 25px;
+    font: large;
+    }
+
+    .button {
+        width: 60px;
+        height: 25px;
+        background-color: #ffeba7;
+        border-radius: 20px;
+        position: relative;
+    }
+
+    .ball {
+        position: absolute;
+        width: 25px;
+        height: 25px;
+        background-color: rgb(115, 113, 139);
+        border-radius: 50%;
+        transition: 0.5s;
+        box-shadow: 0 0 10px rgb(115, 113, 139);
+        left: 0;
+        transform: translate(-1px);
+    }
+    
+    .bottom {
+        width: 300px;
+        height: 250px;
+        background-color: #9CC5B7;
+        transform-style: preserve-3d;
+        position: relative;
+        transition: 0.8s;
+        border-radius: 15px;
+    }
+}
+
+@media screen and (max-width:959px) and (min-width:640px) {
+    .off,
+    .on {
+    color: #000;
+    transition: 0.5s;
+    font-weight: 225;
+    font-size: 19px;
+    font: large;
+    }
+
+    .button {
+        width: 45px;
+        height: 19px;
+        background-color: #ffeba7;
+        border-radius: 12px;
+        position: relative;
+    }
+
+    .ball {
+        position: absolute;
+        width: 19px;
+        height: 19px;
+        background-color: rgb(115, 113, 139);
+        border-radius: 50%;
+        transition: 0.5s;
+        box-shadow: 0 0 8px rgb(115, 113, 139);
+        left: 0;
+        transform: translate(-1px);
+    }
+    
+    .bottom {
+        width: 225px;
+        height: 188px;
+        background-color: #9CC5B7;
+        transform-style: preserve-3d;
+        position: relative;
+        transition: 0.8s;
+        border-radius: 12px;
+    }
+}
+
+@media only screen and (max-width:639px) {
+    .off,
+    .on {
+    color: #000;
+    transition: 0.5s;
+    font-weight: 225;
+    font-size: 19px;
+    font: large;
+    }
+
+    .button {
+        width: 45px;
+        height: 19px;
+        background-color: #ffeba7;
+        border-radius: 12px;
+        position: relative;
+    }
+
+    .ball {
+        position: absolute;
+        width: 19px;
+        height: 19px;
+        background-color: rgb(115, 113, 139);
+        border-radius: 50%;
+        transition: 0.5s;
+        box-shadow: 0 0 8px rgb(115, 113, 139);
+        left: 0;
+        transform: translate(-1px);
+    }
+    
+    .bottom {
+        width: 225px;
+        height: 188px;
+        background-color: #9CC5B7;
+        transform-style: preserve-3d;
+        position: relative;
+        transition: 0.8s;
+        border-radius: 12px;
+    }
+}

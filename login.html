@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="./CSS/login.css">
+</head>
+
+<body>
+    <div class="container">
+
+        <!------------------------------------ Top Part ------------------------------------>
+
+        <div class="top">
+            <span class="off">SIGN IN</span>
+            <div class="button">
+                <div class="ball"></div>
+            </div>
+            <span class="on">SIGN UP</span>
+        </div>
+
+        <!------------------------------------ Bottom Part ------------------------------------>
+
+        <div class="bottom">
+
+            <!-- Sign in -->
+
+            <div class="signin">
+                <h2>Sign in</h2>
+                <input type="text" placeholder="Username">
+                <input type="password" placeholder="Password">
+                <a href="home.html"><button>Enter</button></a>
+            </div>
+
+            <!-- Sign up -->
+
+            <div class="signup">
+                <h2>Sign up</h2>
+                <input type="text" placeholder="Username">
+                <input type="password" placeholder="Password">
+                <input type="password" placeholder="Confirm Password">
+                <a href="home.html"><button>Enter</button></a>
+            </div>
+        </div>
+    </div>
+
+<!------------------------------------ JavaScript ------------------------------------>
+<script>
+    let button = document.querySelector('.button');
+    let ball = document.querySelector('.ball');
+    let bottom = document.querySelector('.bottom');
+    let off = document.querySelector('.off');
+    let on = document.querySelector('.on');
+    let index = 0;
+    button.addEventListener('click', ()=>{
+        if (index == 0) {
+            index = 1
+            ball.style.left = 61+'%'
+            on.style.opacity = 1
+            off.style.opacity = 0.5
+            bottom.style.transform = "rotateY(180deg)"
+        } else {
+            index = 0
+            ball.style.left = 0+'%'
+            on.style.opacity = 0.5
+            off.style.opacity = 1
+            bottom.style.transform = "rotateY(0)"
+        }
+    })
+</script>
+</body>
+</html>

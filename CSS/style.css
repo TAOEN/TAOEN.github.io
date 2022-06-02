@@ -1,0 +1,418 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    margin: 0;
+    color: #252525;
+    position: relative;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+ul,li,p,h1,h2,h3,h4,h5,h6,dl,dt,dd {
+    margin: 0px;
+    padding: 0px;
+    border: none;
+    list-style: none;
+    font-weight: normal;
+}
+
+a {
+    text-decoration: none;
+    text-shadow: none;
+    font-weight: normal;
+}
+
+ul {
+    list-style: none;
+}
+
+textarea,input,button,select {
+    outline: none;
+    -webkit-appearance: none;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+a {
+    color: #6c6c6c;
+    text-decoration: none;
+}
+
+img {
+    border: none;
+    display: block;
+}
+
+/* span {
+    margin: 0;
+    padding: 0;
+    cursor: auto;
+} */
+
+span:focus,div:focus {
+    outline: none;
+}
+
+
+/* ------------------------ */
+
+.flex {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+}
+
+.flexC {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.fl-bet {
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+}
+
+.fl-cen {
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+
+.fl-end {
+    -webkit-box-pack: right;
+    -ms-flex-pack: right;
+    justify-content: flex-end;
+}
+
+.Hs {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+/* Header */
+
+.header {
+    width: 100%;
+    background: #fff;
+    z-index: 99;
+    position: fixed;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    top: 0;
+}
+
+.logo {
+    color: #000;
+}
+
+.logo img {
+    display: block;
+}
+
+.btra {
+    display: block;
+}
+
+.btra img {
+    width: 100%;
+    display: block;
+}
+
+/* Footer */
+
+.footer {
+    color: #fff;
+    background: #4a659a;
+}
+
+.footerRightTop {
+    text-align: center;
+}
+
+.footericon {
+    display: block;
+}
+
+.footericon img {
+    width: 100%;
+    display: block;
+}
+
+
+/* ------------------------ */
+
+
+@media screen and (min-width:1280px) {
+    .banner-top {
+        padding-top: 100px;
+    }
+
+    .wd {
+        width: 1080px;
+        margin: 0 auto;
+    }
+
+    /* Header */
+
+    .header {
+        border-bottom: 1px solid #245548;
+        padding: 0 60px;
+        height: 100px;
+    }
+
+    .logo img {
+        width: 40px;
+    }
+
+    .logo p {
+        font-size: 24px;
+        line-height: 30px;
+        margin-left: 30px;
+    }
+
+    .btra {
+        width: 24px;
+        height: 24px;
+        margin-left: 26px;
+    }
+    
+    /* Footer */
+
+    .footer {
+        padding: 30px 0;
+        font-size: 18px;
+    }
+
+    .footerLeft {
+        line-height: 28px;
+        margin-left: 100px;
+    }
+
+    .footerLeftBottom {
+        margin-top: 20px;
+    }
+
+    .footerRight {
+        width: 450px;
+    }
+
+    .footerRightBottom {
+        padding-top: 15px;
+    }
+
+    .footerRightTop {
+        line-height: 26px;
+    }
+
+    .footericon {
+        width: 30px;
+        height: 30px;
+        margin: 0 7px;
+    }
+}
+
+@media screen and (max-width:1279px) and (min-width:960px) {
+    .banner-top {
+        padding-top: 80px;
+    }
+
+    .wd {
+        width: 900px;
+        margin: 0 auto;
+    }
+
+    /* Header */
+
+    .header {
+        border-bottom: 1px solid #245548;
+        padding: 0 50px;
+        height: 80px;
+    }
+
+    .logo img {
+        width: 30px;
+    }
+
+    .logo p {
+        font-size: 22px;
+        line-height: 30px;
+        margin-left: 25px;
+    }
+
+    .btra {
+        width: 24px;
+        height: 24px;
+        margin-left: 22px;
+    }
+    
+    /* Footer */
+
+    .footer {
+        padding: 26px 0;
+        font-size: 16px;
+    }
+
+    .footerLeft {
+        line-height: 26px;
+        margin-left: 70px;
+    }
+
+    .footerLeftBottom {
+        margin-top: 18px;
+    }
+
+    .footerRight {
+        width: 400px;
+    }
+
+    .footerRightBottom {
+        padding-top: 10px;
+    }
+
+    .footerRightTop {
+        line-height: 26px;
+    }
+
+    .footericon {
+        width: 26px;
+        height: 26px;
+        margin: 0 6px;
+    }
+}
+
+@media screen and (max-width:959px) and (min-width:640px) {
+    .banner-top {
+        padding-top: 65px;
+    }
+
+    .wd {
+        width: 600px;
+        margin: 0 auto;
+    }
+
+    /* Header */
+
+    .header {
+        border-bottom: 1px solid #245548;
+        padding: 0 40px;
+        height: 65px;
+    }
+
+    .logo img {
+        width: 26px;
+    }
+
+    .logo p {
+        font-size: 20px;
+        line-height: 30px;
+        margin-left: 18px;
+    }
+
+    .btra {
+        width: 22px;
+        height: 22px;
+        margin-left: 20px;
+    }
+    
+    /* Footer */
+
+    .footer {
+        padding: 22px 0;
+        font-size: 14px;
+    }
+
+    .footerLeft {
+        line-height: 22px;
+    }
+
+    .footerLeftBottom {
+        margin-top: 16px;
+        margin-left: 50px;
+    }
+
+    .footerRight {
+        width: 300px;
+    }
+
+    .footerRightBottom {
+        padding-top: 8px;
+    }
+
+    .footerRightTop {
+        line-height: 26px;
+    }
+
+    .footericon {
+        width: 24px;
+        height: 24px;
+        margin: 0 4px;
+    }
+}
+
+@media only screen and (max-width:639px) {
+    .banner-top {
+        padding-top: 0.42rem;
+    }
+
+    /* Header */
+
+    .header {
+        border-bottom: 0.01rem solid #245548;
+        padding: 0 4%;
+        height: 0.42rem;
+    }
+
+    .logo img {
+        width: 0.2rem;
+    }
+
+    .logo p {
+        font-size: 0.16rem;
+        line-height: 0.2rem;
+        margin-left: 0.1rem;
+    }
+
+    .btra {
+        width: 0.18rem;
+        height: 0.18rem;
+        margin-left: 0.1rem;
+    }
+    
+    /* Footer */
+
+    .footer {
+        padding: 0.15rem 4%;
+        font-size: 0.11rem;
+    }
+
+    .footerLeft {
+        line-height: 0.18rem;
+    }
+
+    .footerLeftBottom {
+        margin-top: 0.1rem;
+    }
+
+    .footerRightBottom {
+        padding-top: 0.05rem;
+    }
+
+    .footerRightTop {
+        line-height: 0.2rem;
+    }
+
+    .footericon {
+        width: 0.2rem;
+        height: 0.2rem;
+        margin: 0 0.03rem;
+    }
+}
+
