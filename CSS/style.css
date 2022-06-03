@@ -422,7 +422,7 @@ html {
     font-size:625%
 }
 
-@media screen and (min-width:360px) and (max-width:374px) and (orientation:portrait) {
+/* @media screen and (min-width:360px) and (max-width:374px) and (orientation:portrait) {
     html {font-size:703%}
 }
 
@@ -444,4 +444,4 @@ html {
 
 @media screen and (min-width:432px) and (max-width:479px) and (orientation:portrait) {
     html {font-size:843.75%}
-}
+} */
