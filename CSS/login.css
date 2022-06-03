@@ -305,7 +305,7 @@ body {
     
     .bottom {
         width: 225px;
-        height: 200px;
+        height: 225px;
         background-color: #9CC5B7;
         transform-style: preserve-3d;
         position: relative;
@@ -315,7 +315,7 @@ body {
     
     .bottom>div input {
         width: 150px;
-        height: 12px;
+        height: 16px;
         padding: 0 8px;
         background-color: rgb(31, 32, 41);
         background-color: #f8f8f8;
