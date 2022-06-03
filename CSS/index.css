@@ -49,11 +49,11 @@
     transition: 0.5s;
 }
 
-.on {
+.tab .on {
     color: #000;
 }
 
-.on:before {
+.tab .on:before {
     width: 100%;
     transition: 0.5s;
 }
