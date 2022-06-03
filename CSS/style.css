@@ -44,11 +44,11 @@ img {
     display: block;
 }
 
-/* span {
+span {
     margin: 0;
     padding: 0;
     cursor: auto;
-} */
+}
 
 span:focus,div:focus {
     outline: none;
